@@ -14,7 +14,6 @@ class CandidatoController extends Controller
                 ['numero', '=', $num],
                 ['cargo', '=', $cargo]
             ])->firstOrFail();
-            dd($voto);
             $voto->quant_votos++;
             $voto->save();
             return response('votado!', 200);
