@@ -8,9 +8,9 @@ use Illuminate\Http\Request;
 class CandidatoController extends Controller
 {
     public function votar($num){
-        $candidato = Candidato::where('numero', $num)->first();
-        $candidato->quant_votos++;
-        $producao->save();
+        $voto = Candidato::where('numero',"=", $num)->first();
+        $voto->quant_votos++;
+        $voto->save();
         return response('votado!', 200);
     }
 

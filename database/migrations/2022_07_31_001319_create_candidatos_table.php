@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string("partido");
             $table->string("cargo");
             $table->integer("quant_votos");
+            $table->timestamps();
         });
     }
 
