@@ -17,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+// [UserProfileController::class, 'show']
+
+Route::get('/getvotos', [CandidatoController::class, 'getVotos']);
+Route::post('/votar/{$num}', [CandidatoController::class, 'votar']);
+
