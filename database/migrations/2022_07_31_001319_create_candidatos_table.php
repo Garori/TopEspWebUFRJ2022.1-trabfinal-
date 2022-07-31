@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('candidatos', function (Blueprint $table) {
             $table->id();
-            $table->integer("numero");
+            $table->string("numero");
             $table->string("nome");
             $table->string("partido");
             $table->string("cargo");

@@ -22,5 +22,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 // [UserProfileController::class, 'show']
 
 Route::get('/getvotos', [CandidatoController::class, 'getVotos']);
-Route::post('/votar/{num}', [CandidatoController::class, 'votar']);
+Route::post('/votar/{cargo}/{num}', [CandidatoController::class, 'votar']);
+Route::post('/resetar', [CandidatoController::class, 'resetarEleicao']);
 
